@@ -1,4 +1,11 @@
-::: Mermaid
+``` mermaid
+
+---
+config:
+  look: handDrawn
+  theme: neutral
+---
+
 classDiagram
     class CarbonCredits {
         -totalRegistered : uint
@@ -59,6 +66,6 @@ classDiagram
     IntegrationContract -- CreditToken : uses
     IntegrationContract -- Token : uses
 
-    note right of Token : uses Chainlink Oracle
+    note right of Token : Uses Chainlink Oracle
 
-:::
+```
