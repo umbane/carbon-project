@@ -107,7 +107,6 @@ Until such time as there is a dedicated mJ metre, a compliant data output port o
 
 2. Edge hosting projects involving ESP32 plus an MPEG camera may be able to directly input data from the current prepaid meter LCD, streaming the data directly to Home Assistant, and our Chainlink Oracle.
 
-
 3. Another option is to simply allow the purchase of mJ via ZAR. A prosumer gains R50 credit but then feeds this into our system. Efficiency here is highly problematic. How are we to avoid network and gateway entry and exit feeds?
 
 ### Note: Can we generate a specification for future net-metering that will allow us to co-exist? We must advovate for Open Source Data, and Open Spec Metering!
@@ -148,11 +147,11 @@ As already mentioned. the following all come into play under our proposes system
 
 ### Overview of our Team
 
-Please add yourself here
+Please add yourself here by submitting a [pull request](https://github.com/umbane/carbon-project/compare/main...umbane:carbon-project:main)
 
 ### Information regarding token release and marketplace considerations
 
-????
+Pending.
 
 ### Roadmap
 
