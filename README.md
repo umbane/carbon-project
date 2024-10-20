@@ -16,11 +16,11 @@ Benefits include reward of domestic production irrespective of the feed-in tarif
 * **`credittoken.sol`:** ERC20 token contract for carbon credits, inheriting from `carboncredits.sol`.
 * **`certification.sol`:** Contract for a specific certification standard (e.g., Gold Standard), inheriting from `credittoken.sol`.
 * **`integration/IntegrationContract.sol`:** Contract integrating the carbon credit system with the energy token system.
+* **`token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.
 * **`/home/dav/Projects/mecc-token/contracts/Token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.  **Note:** This contract resides in a separate repository and needs to be merged into this project.
 * **`docs/README.md`:** Documentation for the carbon credit system.
 * **`docs/chainlink_integration.md`:** Documentation for Chainlink oracle integration.
 * **`docs/system_diagram.md`:** Mermaid diagram visualizing the contract system.
-
 
 ## Integration Details
 
