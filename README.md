@@ -4,7 +4,7 @@ This project integrates a carbon credit system with an energy token system.
 
 # Rational
 
-Currently City of Cape Town electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where users are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
+Currently City of Cape Town (CoCT) electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where users are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
 
 We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk or other carbon trading projects.
 
@@ -16,15 +16,20 @@ Benefits include reward of domestic production irrespective of the feed-in tarif
 * **`certification.sol`:** Contract for a specific certification standard (e.g., Gold Standard), inheriting from `credittoken.sol`.
 * **`integration/IntegrationContract.sol`:** Contract integrating the carbon credit system with the energy token system.
 * **`token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.
-* **`/home/dav/Projects/mecc-token/contracts/Token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.  **Note:** This contract resides in a separate repository and needs to be merged into this project.
 * **`docs/README.md`:** Documentation for the carbon credit system.
 * **`docs/chainlink_integration.md`:** Documentation for Chainlink oracle integration.
 * **`docs/system_diagram.md`:** Mermaid diagram visualizing the contract system.
+* **`docs/white-paper.md`:** MECC White Paper
 
 ## Integration Details
 
-The `IntegrationContract.sol` facilitates the interaction between the carbon credit system and the energy token system.  It allows for the accrual of aC tokens based on carbon credit issuance and potentially mJ token usage (requires further implementation).  A Chainlink oracle is planned for verifying energy usage data and minting mJ tokens.
+The `IntegrationContract.sol` facilitates the interaction between the carbon credit system and the energy token system.  It allows for the accrual of aC tokens based on carbon credit issuance and potentially mJ token usage (requires further implementation).  
 
+A `Chainlink oracle` is planned for verifying energy usage data and minting mJ tokens.
+
+A `Data Output Port specification` is also proposed alongside Open Net Metering which may facilitate the future progress of this project
+
+A method of scraping data from the current metering system utilising ESP32 & MPEG is also proposed.
 
 ## Polygon Network Refactoring
 
@@ -42,3 +47,6 @@ Refactoring this project to the Polygon network would involve recompiling the co
 * Merge the [mecc-token/contracts/Token.sol](https://github.com/ubuntupunk/mecc-token/contracts/Token.sol) contract into this project.
 * Further define the relationship between mJ and aC token accrual.
 * Refactor to Polygon network.
+* Draft the various specifications
+* Publish schematics for DIY ESP32 data funnel to our Oracle.
+* Thorough testing and modeling to assess viability.
