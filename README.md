@@ -4,7 +4,11 @@ This project integrates a carbon credit system with an energy token system.
 
 # Rational
 
-Currently City of Cape Town electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly in users are prevented from sharing energy and/or surplus credits directly with their neighbours and the community. We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk. Benefits include reward of domestic production irrespective of the feed-in tariff, and abilithy to store tokens for future economic advantage. See our [white paper](https://mecc.org.za/white-paper)
+Currently City of Cape Town electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where users are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
+
+We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk or other carbon trading projects.
+
+Benefits include reward of domestic production irrespective of the feed-in tariff, and ability to store tokens for future economic advantage. See our [white paper](https://mecc.org.za/white-paper)
 
 ## Project Structure
 
