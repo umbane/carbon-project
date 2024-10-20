@@ -1,33 +1,37 @@
-# Carbon-Project
+# Carbon Credits and Energy System
 
-Summary
+This project integrates a carbon credit system with an energy token system.
 
-We aim to create a Carbon Credit Ecosystem on the Ethereum blockchain to bring more liquidity, transparency, accessibility, and standardization to carbon markets. This ecosystem includes all stakeholders, a tokenization mechanism with clear minting and burning protocols (ERC20), a transparent distribution of tokens, and a free automated market maker (AMM) for trading these carbon tokens. We also issue a carbon removal certificate as an Ethereum-based non-fungible token (NFTs) for companies and individuals that successfully use the carbon credit and verify it.
+## Project Structure
+
+* **`carboncredits.sol`:** Core contract for managing carbon credit holders, verifiers, and customers.
+* **`credittoken.sol`:** ERC20 token contract for carbon credits, inheriting from `carboncredits.sol`.
+* **`certification.sol`:** Contract for a specific certification standard (e.g., Gold Standard), inheriting from `credittoken.sol`.
+* **`integration/IntegrationContract.sol`:** Contract integrating the carbon credit system with the energy token system.
+* **`/home/dav/Projects/mecc-token/contracts/Token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.  **Note:** This contract resides in a separate repository and needs to be merged into this project.
+* **`docs/README.md`:** Documentation for the carbon credit system.
+* **`docs/chainlink_integration.md`:** Documentation for Chainlink oracle integration.
+* **`docs/system_diagram.md`:** Mermaid diagram visualizing the contract system.
 
 
-Background
+## Integration Details
 
-Climate change and global warming are the significant challenges of the new century. Kyoto protocol (1997) regards the market mechanism as a way to solve the greenhouse gas emission reduction problem. In this view, the carbon dioxide emission is considered a commodity, forming a carbon trading system. According to the United Nations, carbon offsetting is particularly crucial for meeting the Paris Climate Agreement’s goal. There have been efforts to mitigate this problem using a carbon tax or credit. Carbon offsetting allows companies and individuals to reduce carbon emissions by purchasing carbon credits from carbon reduction projects. These projects include planting new trees, avoiding deforestation, investment in renewable energy, carbon capture, and sequestration projects. However, there has not been a global adaptation of these ideas, mainly due to a lack of transparency on issuance, usage, and life cycle of carbon credits. 
+The `IntegrationContract.sol` facilitates the interaction between the carbon credit system and the energy token system.  It allows for the accrual of aC tokens based on carbon credit issuance and potentially mJ token usage (requires further implementation).  A Chainlink oracle is planned for verifying energy usage data and minting mJ tokens.
 
-Project Description
 
-In this project, different stakeholders involved are “Generators” of carbon credit (i.e., wind farms, tree-planting operations, CO2 sequestration projects, etc.) and “Consumers” of carbon credit (i.e., carbon emitters or polluters of any kind such as the energy industry) as well as other stakeholders such as regulators, concerned citizens, and validators. “Validators” are an essential part of this ecosystem. They are accredited, globally distributed, technically competent consultants are incentivized to parameterize appropriately and onboard projects to an open architecture marketplace that matches interested parties generating and retiring carbon credits.
-We will onboard carbon credits to the Ethereum by converting them into ERC-20 tokens distributed to carbon credit generators after proper validation of their projects. Buyers and sellers of carbon credit will use a decentralized exchange platform on Ethereum to trade Carbon credits. The price could be determined by market dynamics driven by supply and demand. The Carbon Tokens would be retired via a “buy and burn” model by sending the given Carbon Tokens to a smart contract or defined Ethereum address whose private key is not known by any party and can be visible to the collective of validators as well as regulators or other stakeholders. The companies and individuals who successfully burn their ERC20 tokens will be issues Ethereum-based non-fungible tokens as a carbon removal certificate.
+## Polygon Network Refactoring
 
-Technical Descirption
+Refactoring this project to the Polygon network would involve recompiling the contracts for the Polygon network and deploying them to a Polygon-compatible RPC endpoint.  Key considerations include:
 
-1.	carboncredits.sol: Creates a registration template that takes in details from 3 groups:
-•	Group 1 - Verifiers: They validate carbon credits from credit holders. They also verify that carbon tokens burnt are equivalent to the burning of a proportionate amount of emissions.
-•	Group 2 – Creditholders: They are organizations that already hold carbon credits in the emissions trading ecosystem
-•	Group 3 – Customers: They are individuals and companies interested in offsetting their carbon footprint by buying carbon credits and burning the carbon token.
-2.	credittoken.sol: Creates an ERC20 token based on supplied and approved carbon credits through a series of functions:
-•	Approve credits entered by the creditholders, which is certified by the verifiers.
-•	Mint the Carbon token.
-•	Make the Carbon token transferrable and burnable.
-3.	certification.sol: Creates an ERC721 token (NFT) as a badge of successful burning carbon tokens, representing offsetting carbon emissions.
-•	Mint an ERC721 token for every 20 Carbon tokens burnt.
-4.	Create a Balancer Smart Pool (AMM)
-•	A smart pool that includes swappable DAI - Carbon token pair
-•	The pool provides incentives for liquidity providers through a transaction fee
-•	It also provides dynamic pricing for the Carbon token
+* **Gas Costs:**  Gas costs on Polygon are generally lower than on Ethereum, potentially reducing transaction fees.
+* **Network Compatibility:** Ensure compatibility with Polygon-specific tools and libraries.
+* **Bridge Considerations:**  If existing contracts are deployed on Ethereum, a bridge mechanism might be needed to transfer tokens or data between networks.  Since this project is not yet deployed, this is not a current concern.
 
+
+## Future Work
+
+* Implement the Chainlink oracle integration.
+* Implement the carbon credit gateway API.
+* Merge the [mecc-token/contracts/Token.sol](https://github.com/ubuntupunk/mecc-token/contracts/Token.sol) contract into this project.
+* Further define the relationship between mJ and aC token accrual.
+* Refactor to Polygon network.
