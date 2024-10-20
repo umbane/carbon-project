@@ -34,9 +34,9 @@ As our system developed we realised that we could bypass the feed-in tariff, mak
 
 In order to correct the deficiencies in public policy we initially aimed to create a pool into which ‘prosumers’ already servicing the City could pledge a proportion or 100% of their output in the form of the feed-in-tariff rebate. But since this would mean those not able to feed-into-the-grid were left out, our latest iteration of our proposal relies soley upon varified production of electricity eligible for carbon credits.
 
-We keep our initial ideas inside our white paper in order to note them for future discussion, but for now, our aim is to simply not complicate utility.
+We will keep our initial ideas inside our white paper, in order to note them for future discussion, but for now, our aim is to simplify not complicate our utility.
 
-Thus our scheme ** books one unit for every unit added to the common pool **  not just the City grid. 
+Thus our collective scheme ** books one unit for every unit added to the common pool **  not just the City grid. 
 
 We need to note here a pledge model may be considered allowing actual energy to be pledged to our scheme, and in return an audit of one offset reward for every offset gained, and treated accordingly, but we will leave this thread for later.
 
