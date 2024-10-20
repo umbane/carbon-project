@@ -2,7 +2,7 @@
 
 ## PLEDGE-BASED COMMUNITY ENERGY MODEL WITH BLOCKCHAIN, CARBON CREDITS, NET-METERING & TIME-OF-USE BIDDING
 
-## Version 1.0
+## Version 1.0 "work in progress"
 
 ## Project Outline
 
@@ -68,7 +68,6 @@ There are a number of variables and conditions that may exist in the form of a s
 
 5.  Another example: A pledgor uses the mJ as a simple reserve of energy. The smart contract indicates that only he or she can redeem the token. It exists within the system, drawing nominal interest in the form of the secondary token proposed below.
 
-
 ### Carbon Register on the Blockchain
 
 In its most basic form, mJ is traded for aC via the carbon trading desk API on various exchanges.
@@ -109,7 +108,9 @@ Until such time as there is a dedicated mJ metre, a compliant data output port o
 
 3. Another option is to simply allow the purchase of mJ via ZAR. A prosumer gains R50 credit but then feeds this into our system. Efficiency here is highly problematic. How are we to avoid network and gateway entry and exit feeds?
 
-### Note: Can we generate a specification for future net-metering that will allow us to co-exist? We must advovate for Open Source Data, and Open Spec Metering!
+### Note: Can we generate a specification for future net-metering that will allow us to co-exist? 
+
+### We must advocate for Open Source Data, and Open Spec Metering!
 
 ### Net-metering Use Case. Open Metering vs Closed Metering
 
@@ -133,7 +134,7 @@ Since the tokens already have a fiat face value, in essence representing a real-
 
 ### Voluntary Carbon Markets
 
-The voluntary carbon market (VCM), according to the Rocky Mountain Institute, has a trust problem: The quality and efficacy of the existing carbon credit supply has drawn widespread skepticism. The environmental group has thus implemented a ‘Carbon Markets Initiative’ and is working to enable collective action to generate trust in the quality of the data associated with on-chain carbon credits. We are thus also interested in identifying blockchain use cases relevant to the needs of those who create, track, certify, sell, and buy carbon credits.
+The [voluntary carbon market](https://www.jse.co.za/services/jse-ventures-carbon-market) (VCM), according to the Rocky Mountain Institute, has a trust problem: The quality and efficacy of the existing carbon credit supply has drawn widespread skepticism. The environmental group has thus implemented a ‘Carbon Markets Initiative’ and is working to enable collective action to generate trust in the quality of the data associated with on-chain carbon credits. We are thus also interested in identifying blockchain use cases relevant to the needs of those who create, track, certify, sell, and buy carbon credits.
 
 Where does the aC+ component of cArb derive its value? Gateways to those chains which have demonstrated trust and which represent real-world carbon reduction technologies are being rolled out. By turning ourselves into a trust-worthy source of renewable energy, whose abstractions represent real-world goods, our tokens become assets within a broader global ecosystem. We reward our users who in turn reward other networks wishing to generate a carbon and energy offset.
 
