@@ -1,3 +1,4 @@
+::: Mermaid
 classDiagram
     class CarbonCredits {
         -totalRegistered : uint
@@ -59,3 +60,5 @@ classDiagram
     IntegrationContract -- Token : uses
 
     note right of Token : Uses Chainlink Oracle
+
+:::
