@@ -36,7 +36,7 @@ In order to correct the deficiencies in public policy we initially aimed to crea
 
 We will keep our initial ideas inside our white paper, in order to note them for future discussion, but for now, our aim is to simplify not complicate our utility.
 
-Thus our collective scheme ** books one unit for every unit added to the common pool **  not just the City grid. 
+Thus our collective scheme **books one unit for every unit added to the common pool**  not just the City grid. 
 
 We need to note here a pledge model may be considered allowing actual energy to be pledged to our scheme, and in return an audit of one offset reward for every offset gained, and treated accordingly, but we will leave this thread for later.
 
@@ -88,11 +88,11 @@ NOTE: Chainlink Oracles have been proposed as the solution to data varification
 
 #### Carbon Credit rev
 
-Take the case of a scheme member who purchases an mJ token, which lso receives carbon revenue in the form of an aC token issued as a reward. Since each mJ would have a relationship to aC depending upon the pledgement choice, a smart contract linking the two tokens is issued.
+Take the case of a scheme member who purchases an mJ token, which also receives carbon revenue in the form of an aC token issued as a reward. Since each mJ would have a relationship to aC depending upon the pledgement choice, a smart contract linking the two tokens is issued.
 
 Users of our system either convert the two tokens as cArb when required to purchase or redeem energy, or reward other parties via conversion or splitting into ‘energy’ or ‘cash’. Once the underlying contract expires, and the the concluding condition (provide transactional energy on our system) is fulfulled, the token vanishes
 
-The system would thus ‘burn’ the resulting tokens after an instant onchain audit, a self-correcting thsystem to avoid the problem of our tokens exceeding the actual energy supply, or an equally problematic devaluation situation, whose progress requires further modelling and monitoring.
+The system would thus ‘burn’ the resulting tokens after an onchain audit, a self-correcting system to avoid the problem of our tokens exceeding the actual energy supply, or an equally problematic devaluation situation, whose progress requires further modelling and monitoring.
 
 cArb (cA+mj) Tokens would always be issued based upon the total resource created, and logged as blockchain entries, with a corresponding ledger and transaction entry, enabling real-time auditing.
 
@@ -100,13 +100,15 @@ All tokens on the system would thus form the basis for a virtualised entity, a v
 
 ### Onboarding Pledges & Smart Contracts
 
-Until such time as there is a dedicated mJ metre, a compliant data output port or socket, that coexists on a DB board alongside the City feed-in metre, methods of extrapolating and inputing data into the system need to be considered.
+Until such time as there is a dedicated mJ generating metre, a compliant data output port or socket specification, that coexists on a DB board alongside the City feed-in metre, methods of extrapolating and inputing data into the system need to be considered.
 
-1. The first method which springs to mind is to simply OCR the monthly energy bill, in effect the City information is scraped from the paper or data provided by the city and forms the basis of the chain of evidence underlying the system and its audit process.
+1. The first method which springs to mind is to simply OCR the monthly energy bill,in effect the City information is scraped from the paper or data provided by the city and forms the basis of the chain of evidence underlying the system and its audit process.
 
-2. Edge hosting projects involving ESP32 plus an MPEG camera may be able to directly input data from the current prepaid meter LCD, streaming the data directly to Home Assistant, and our Chainlink Oracle.
+2. Edge hosting projects involving ESP32 microcontroller plus an MPEG camera may be able to directly input data from the current prepaid meter LCD, streaming the data directly to Home Assistant, and our Chainlink Oracle.
 
-3. Another option is to simply allow the purchase of mJ via ZAR. A prosumer gains R50 credit but then feeds this into our system. Efficiency here is highly problematic. How are we to avoid network and gateway entry and exit feeds?
+3. Another option is to simply allow the purchase of mJ via ZAR. A prosumer gains R50 credit but then feeds this into our system. The unit for obvious reasons does not attract aC credits, but is capable of circulating until other conditions are met. Efficiency here is problematic.
+
+4. How are we to create additional network and gateway entry and exit feeds?
 
 ### Note: Can we generate a specification for future net-metering that will allow us to co-exist? 
 
