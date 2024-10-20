@@ -75,7 +75,7 @@ In its most basic form, mJ is traded for aC via the carbon trading desk API on v
 
 An incentive on top of the City incentive to produce further input to the grid and/or domestic surplus by adding initial pledged mJ, is found by creating an (immediate) reward to our members for their participation in the form of a secondary register of carbon credits. We are still uncertain as to the exact implementation.
 
-Any esulting income stream may benefit the prosumer directly by either rewarding every holder of mJ with an additional token which together with mJ may be said to represent a third entity ‘cArb’ which like mJ is redeemable for fiat and/or energy, and creating additional factors which allow this unit to feed back into the system in the form of tokenised aC+ credits and simple mJ, and distributed according to the variable conditions outlined in the previous smart contract section above.
+Any resulting income stream may benefit the prosumer directly by either rewarding each holder of mJ with an additional token which together with mJ will represent a third entity ‘cArb’. mJ is thus redeemable for fiat and/or energy, allowing this unit to feed back into the system in the form of tokenised aC+ credits and the simple mJ, and distributed according to the variable conditions outlined in the previous smart contract section above.
 
 ## There is a big caveat at the face. Rolling our own carbon credit system, in which the collective scheme registers the production of renewable energy on the system to generate aC+ and applies it to the global carbon credits regime can only exist if when the mJ pledge is made, a corresponding carbon credit is not also added to the City coffers via a similar scheme.
 
