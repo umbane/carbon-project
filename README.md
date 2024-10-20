@@ -2,7 +2,7 @@
 
 This project integrates a carbon credit system with an energy token system.
 
-# Rational
+# Rationale
 
 Currently City of Cape Town (CoCT) electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where users are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
 
@@ -48,5 +48,6 @@ Refactoring this project to the Polygon network would involve recompiling the co
 * Further define the relationship between mJ and aC token accrual.
 * Refactor to Polygon network.
 * Draft the various specifications
-* Publish schematics for DIY ESP32 data funnel to our Oracle.
+* Publish schematics for DIY ESP32 data funnel to our Network Oracle.
 * Thorough testing and modeling to assess viability.
+* Implementation of pledge system.
