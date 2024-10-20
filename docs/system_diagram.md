@@ -66,6 +66,6 @@ classDiagram
     IntegrationContract -- CreditToken : uses
     IntegrationContract -- Token : uses
 
-    note right of Token : Uses Chainlink Oracle
+    Note right of Token : "Uses Chainlink Oracle"
 
 ```
