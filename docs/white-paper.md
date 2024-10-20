@@ -60,7 +60,7 @@ There are a number of variables and conditions that may exist in the form of a s
 
 1.  One mJ unit in its basic form is minted for every one watt of variable domestic production of electricity. This is the current preferred method.
 
-2. A pledge contract may also be generated within the mJ ecosystem, in which a Pledgor agrees to Pay-Energy-Forward and likewise, wants may wish to reserve or store energy for the future. The mJ pledge contract exists until it is burnt via an act of distribution according to the underlying variable or condition.
+2. A pledge contract may also be generated within the mJ ecosystem, in which a Pledgor agrees to Pay-Energy-Forward to the Pledgee and likewise, may wish to reserve or store energy for the future. The mJ pledge contract exists until it is burnt via an act of distribution according to the underlying variable or condition.
 
 3.  An example: a person without energy, retrieves a pledgement from the common pool, but cannot withdraw all the energy at face value, because it has a conditional ratio: 60% awarded to needy users divided by the pool of actual users, or 40% awarded to prosumers divided by the pool of prosumers, who include the entire pool of prosumers including the originator. This exercise is currently not implemented but we leave this here for future consideration.
 
