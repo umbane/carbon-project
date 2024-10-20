@@ -26,13 +26,13 @@ Another dimension to the problem is the lack of policy with regard to collective
 
 City Policy as it stands, assumes a one-to-one relationship where every home has a prepaid metre and every producer-consumer of domestic energy i.e prosumer, similarly provisioned and rewarded accordingly. There are no options with regard to sharing infrastructure amongst prosumers, and no means by which a prosumer may wheel energy to and from his or her neighbour who lacks the ability to produce. Likewise, no options exist to lower barriers to entry, for collective schemes by way of a shared grid-tied feed in metre.
 
-## Solution
+## A Blockchain approach to a solution
 
 Our proposed system initially involved an abstraction of the tariff structure as it stood. This meant that nothing further would be required from the City other than an endorsement of our plan, and we would thus take the feed-in tariff as our baseline, a known quantity.
 
 As our system developed we realised that we could bypass the feed-in tariff, making it unnecessary to concern ourselves with the City. Our system primarly focuses on creating an 'Oracle of Data' based upon varifiable domestic production of watts.
 
-In order to correct the deficiencies in public policy we initially aimed to create a pool into which ‘prosumers’ already servicing the City could pledge a proportion or 100% of their output in the form of the feed-in-tariff rebate. But since this would mean those not able to feed-into-the-grid were left out, our latest iteration of our proposal relies soley upon varified production of electricity eligible for carbon credits.
+In order to correct the deficiencies in public policy we initially aimed to create a pool into which ‘prosumers’ already servicing the City could pledge a proportion or 100% of their output in the form of the feed-in-tariff rebate. But since this would mean those who are not able to feed-into-the-grid were left out, our latest iteration of our proposal relies soley upon varified production of electricity eligible for carbon credits.
 
 We will keep our initial ideas inside our white paper, in order to note them for future discussion, but for now, our aim is to simplify not complicate our utility.
 
@@ -40,7 +40,7 @@ Thus our collective scheme ** books one unit for every unit added to the common 
 
 We need to note here a pledge model may be considered allowing actual energy to be pledged to our scheme, and in return an audit of one offset reward for every offset gained, and treated accordingly, but we will leave this thread for later.
 
-This fundamental token, whether pledged or not, for the purposes of this white paper is measured in a proposed MuizenJoules “mJ” and constitutes our tokenised unit in issue, which is alble to accrue a carbon credit in the form of "aC"
+This fundamental token, whether pledged or not, for the purposes of this white paper is measured in a proposed MuizenJoules “mJ” token and constitutes our tokenised unit in issue, which is alble to accrue a carbon credit in the form of "aC"
 
 ### Tokenisation: Smart Contract, Pay-it-Forward, Energy Credits
 
