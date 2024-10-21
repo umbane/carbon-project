@@ -2,8 +2,8 @@
 
 The `Token` contract is a combined ERC20 and ERC721 contract that manages two types of tokens:
 
-* **MegaJoule (MJ):** An ERC20 fungible token representing units of energy.
-* **ACNFT (AC):** An ERC721 non-fungible token representing carbon credits.
+* **MegaJoule (mJ):** An ERC20 fungible token representing units of energy.
+* **aCNFT (aC):** An ERC721 non-fungible token representing carbon credits.
 
 The contract also integrates with Chainlink's Verifiable Random Function (VRF) for generating verifiable randomness.  This is likely used for aspects such as determining energy usage or other random events within the system.
 

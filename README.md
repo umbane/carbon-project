@@ -41,15 +41,11 @@ Refactoring this project to the Polygon network would involve recompiling the co
 * **Network Compatibility:** Ensure compatibility with Polygon-specific tools and libraries.
 * **Bridge Considerations:**  If existing contracts are deployed on Ethereum, a bridge mechanism might be needed to transfer tokens or data between networks.  Since this project is not yet deployed, this is not a current concern.
 
-
 ## Future Work
 
 * Implement the Chainlink oracle integration.
 * Implement the carbon credit gateway API.
 * Further define the relationship between mJ and aC token accrual.
-* Refactor to Polygon network.
-* Draft the various specifications
-* Publish schematics for DIY ESP32 data funnel to our Network Oracle.
 * Thorough testing and modeling to assess viability.
-* Implementation of pledge system.
+* Further define pledge system.
 * Implementation of a verification system.

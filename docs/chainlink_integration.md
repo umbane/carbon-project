@@ -10,7 +10,7 @@ The proposed system consists of the following components:
 
 2. **Chainlink Node:** A Chainlink node configured to access the data source.  This node fetches energy usage data and submits it to the smart contract.  Security and authentication are critical for this node.
 
-3. **Smart Contract (`Token.sol`):** The `Token.sol` contract will be modified to include a function that interacts with the Chainlink oracle. This function triggers the oracle to fetch and verify data before minting mJ tokens.
+3. **Smart Contract (`token.sol`):** The `token.sol` contract will be modified to include a function that interacts with the Chainlink oracle. This function triggers the oracle to fetch and verify data before minting mJ tokens.
 
 4. **Off-Chain Reporting:** The Chainlink node reports energy usage data to the smart contract using Chainlink's off-chain reporting mechanism.  This ensures data integrity and security.
 
