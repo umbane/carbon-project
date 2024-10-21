@@ -28,6 +28,77 @@ City Policy as it stands, assumes a one-to-one relationship where every home has
 
 ## A Blockchain approach to a solution
 
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#BB2528',
+      'primaryTextColor': '#fff',
+      'primaryBorderColor': '#7C0000',
+      'lineColor': '#F8B229',
+      'secondaryColor': '#006100',
+      'tertiaryColor': '#fff'
+    }
+  }
+}%%
+
+graph LR
+    subgraph "Data Acquisition"
+        A[Prepaid Meter Data Port] --> B(Data Acquisition System);
+        D --> B;
+        B --> E(Data Processing);
+        Z[Domestic Electricity Production] --> B;
+    end
+
+    subgraph "Domestic Energy Production"
+        Z --> Y[Home Solar Array];
+        Z --> X[Home Wind Gen];
+        Z --> W[Micro-grid];
+        Z --> V[Community Owned Projects];
+    end
+
+    E --> F{Chainlink Oracle};
+    F --> G[Smart Contracts];
+
+    subgraph "Smart Contracts"
+        G --> H[Token Contract MJ, aC];
+        G --> I[Pledge Contract CarB];
+        H --> J[Certification Contract NFTs];
+    end
+
+    subgraph "Token System"
+        H; I; J;
+        J --> K[User Wallet MetaMask/Phantom];
+        I --> L[Community Projects];
+        H --> O[Energy Bank];
+    end
+
+    subgraph "Carbon Market Integration"
+        aC --> M[JSE Carbon Trading Desk];
+        aC --> N[Other Carbon Platforms];
+    end
+
+    style A fill:#ccf,stroke:#333,stroke-width:2px;
+    style J fill:#ccf,stroke:#333,stroke-width:2px;
+    style G fill:#ccf,stroke:#333,stroke-width:2px;
+    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 stroke:#666,stroke-width:2px;
+
+    classDef token fill:#ccf,stroke:#333,stroke-width:2px;
+    classDef nft fill:#ccf,stroke:#333,stroke-width:2px;
+    classDef oracle fill:#ccf,stroke:#333,stroke-width:2px;
+
+    class H,J token;
+    class F oracle;
+
+  linkStyle 0,1,2,3,4,5,6,7,8 stroke:#666,stroke-width:2px
+    style A fill:#ccf,stroke:#333,stroke-width:2px
+    style J fill:#ccf,stroke:#333,stroke-width:2px
+    style G fill:#ccf,stroke:#333,stroke-width:2px
+
+```
+
 Our proposed system initially involved an abstraction of the tariff structure as it stood. This meant that nothing further would be required from the City other than an endorsement of our plan, and we would thus take the feed-in tariff as our baseline, a known quantity.
 
 As our system developed we realised that we could bypass the feed-in tariff, making it unnecessary to concern ourselves with the City. Our system primarly focuses on creating an 'Oracle of Data' based upon varifiable domestic production of watts.
@@ -277,71 +348,4 @@ This phased approach ensures the system's immediate viability while paving the w
 
  A carbon removal certificate (NFT) will be issued for successful carbon credit usage.  The project involves generators, consumers, validators, and regulators.  Onboarding involves converting carbon credits to ERC20 tokens, trading on a decentralized exchange, and a "buy and burn" mechanism for retiring tokens.  A Balancer Smart Pool (AMM) will be created for trading Carbon tokens.  The Chainlink integration will use a reliable data source, a Chainlink node, and smart contract modifications to `token.sol` for requesting, verifying, and minting tokens based on verified energy usage data.
 
-```mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#BB2528',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#7C0000',
-      'lineColor': '#F8B229',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff'
-    }
-  }
-}%%
 
-graph LR
-    subgraph "Data Acquisition"
-        A[Prepaid Meter Data Port] --> B(Data Acquisition System);
-        C[Prepaid Meter No Data Port] --> D(ESP32 + Camera);
-        D --> B;
-        B --> E(Data Processing);
-        Z[Domestic Electricity Production] --> B;
-    end
-
-    subgraph "Domestic Energy Production"
-        Z --> Y[Home Solar Array];
-        Z --> X[Home Wind Gen];
-        Z --> W[Micro-grid];
-        Z --> V[Community Owned Projects];
-    end
-
-    E --> F{Chainlink Oracle};
-    F --> G[Smart Contracts];
-
-    subgraph "Smart Contracts"
-        G --> H[Token Contract MJ, aC];
-        G --> I[Pledge Contract CarB];
-        H --> J[Certification Contract NFTs];
-    end
-
-    subgraph "Token System"
-        H; I; J;
-        J --> K[User Wallet MetaMask/Phantom];
-        I --> L[Community Projects];
-        H --> O[Energy Bank];
-    end
-
-    subgraph "Carbon Market Integration"
-        aC --> M[JSE Carbon Trading Desk];
-        aC --> N[Other Carbon Platforms];
-    end
-
-    style A fill:#ccf,stroke:#333,stroke-width:2px;
-    style J fill:#ccf,stroke:#333,stroke-width:2px;
-    style G fill:#ccf,stroke:#333,stroke-width:2px;
-    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 stroke:#666,stroke-width:2px;
-
-    classDef token fill:#ccf,stroke:#333,stroke-width:2px;
-    classDef nft fill:#ccf,stroke:#333,stroke-width:2px;
-    classDef oracle fill:#ccf,stroke:#333,stroke-width:2px;
-
-    class H,J token;
-    class F oracle;
-
-  linkStyle 0,1,2,3,4,5,6,7,8 stroke:#666,stroke-width:2px
-    style A fill:#ccf,stroke:#333,stroke-width:2px
-    style J fill:#ccf,stroke:#333,stroke-width:2px
-    style G fill:#ccf,stroke:#333,stroke-width:2px
