@@ -1,4 +1,4 @@
-# Carbon Credits and Energy System
+# Community Carbon Credits and Energy System
 
 This project integrates a carbon credit system with an energy token system.  The core contracts are detailed in [docs/README.md](docs/README.md), including `carboncredits.sol`, `credittoken.sol`, `certification.sol`, `token.sol`, `integration/IntegrationContract.sol`, and `pledge.sol`.  A key feature of this system is the issuance of carbon credits (aC) as NFTs, providing enhanced security and transparency.
 
@@ -6,9 +6,9 @@ This project integrates a carbon credit system with an energy token system.  The
 
 Currently City of Cape Town (CoCT) electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where consumers who produce i.e. *prosumers* are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
 
-We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk or other carbon trading projects.
+We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk, Cape Town Stock Exchange or other carbon trading projects.
 
-Benefits include reward of domestic production irrespective of the feed-in tariff, and ability to store tokens for future economic advantage. See our [white paper](https://github.com/Muizenberg-Electricity-Cooperative/Carbon-Project/blob/main/docs/white-paper.md)
+Benefits include reward of domestic elelctricity production irrespective of the feed-in tariff, and ability to pledge and store tokens for future economic advantage. See our [white paper](https://github.com/Muizenberg-Electricity-Cooperative/Carbon-Project/blob/main/docs/white-paper.md)
 ## Project Structure
 
 * **`carboncredits.sol`:** Core contract for managing carbon credit holders, verifiers, and customers.
