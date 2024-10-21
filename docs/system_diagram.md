@@ -1,6 +1,5 @@
 ``` mermaid
 
-
 %%{
   init: {
     'theme': 'base',
