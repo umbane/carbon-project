@@ -1,10 +1,10 @@
 # Carbon Credits and Energy System
 
-This project integrates a carbon credit system with an energy token system.
+This project integrates a carbon credit system with an energy token system.  The core contracts are detailed in [docs/README.md](docs/README.md), including `carboncredits.sol`, `credittoken.sol`, `certification.sol`, `token.sol`, `integration/IntegrationContract.sol`, and `pledge.sol`.
 
 # Rationale
 
-Currently City of Cape Town (CoCT) electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where users are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
+Currently City of Cape Town (CoCT) electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where consumers/producers i.e. *prosumers* are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
 
 We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk or other carbon trading projects.
 
@@ -16,7 +16,8 @@ Benefits include reward of domestic production irrespective of the feed-in tarif
 * **`certification.sol`:** Contract for a specific certification standard (e.g., Gold Standard), inheriting from `credittoken.sol`.
 * **`integration/IntegrationContract.sol`:** Contract integrating the carbon credit system with the energy token system.
 * **`token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.
-* **`docs/README.md`:** Documentation for the carbon credit system.
+* **`pledge.sol`:** Contract for pledging mJ and/or aC tokens to generate CarB tokens.
+* **`docs/README.md`:** Detailed documentation for all contracts.
 * **`docs/chainlink_integration.md`:** Documentation for Chainlink oracle integration.
 * **`docs/system_diagram.md`:** Mermaid diagram visualizing the contract system.
 * **`docs/white-paper.md`:** MECC White Paper
@@ -51,3 +52,4 @@ Refactoring this project to the Polygon network would involve recompiling the co
 * Publish schematics for DIY ESP32 data funnel to our Network Oracle.
 * Thorough testing and modeling to assess viability.
 * Implementation of pledge system.
+* Implementation of a verification system.
