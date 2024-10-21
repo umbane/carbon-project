@@ -110,9 +110,9 @@ Until such time as there is a dedicated mJ generating metre, a compliant data ou
 
 4. How are we to create additional network and gateway entry and exit feeds?
 
-### Note: Can we generate a specification for future net-metering that will allow us to co-exist? 
+#### Note: Can we generate a specification for future net-metering that will allow us to co-exist with officialdom? 
 
-### We must advocate for Open Source Data, and Open Spec Metering!
+#### We must advocate for Open Source Data, and Open Spec Metering!
 
 ### Net-metering Use Case. Open Metering vs Closed Metering
 
@@ -158,14 +158,14 @@ Pending.
 
 ### Roadmap
 
-1.  Letters of Incorporation as a Cooperative
-2.  Registration of our first pledge
-3.  Registration of our first carbon credit
+1.  Letters of Incorporation as a Cooperative or DAO.
+2.  Registration and Minting of First Energy Token.
+3.  Registration and Minting of our first carbon credit
 4.  First successful audit of the system
-5.  First tokenised unit minted via blockchain/sidechain
-6.  Release of our redeemable tokens on top of our blockchain/sidechain.
-7.  First test of our network net-metering, payment gateway to third parties.
-8.  First test of an autobid and local time of use tariff contract.
+5.  Registration and Conversion of our first Pledge Token by Pledger
+6.  First Pledgee to receive a Pledge Token and utilise it on our network.
+7.  First test of our network bridge or payment gateway to third parties services
+8.  Implementation of autobidding and local time of use tariff contracts on our network.
 9.  Future smart contracts issued
 
 ### Discussion
@@ -202,7 +202,7 @@ This approach involves integrating a Chainlink oracle network to fetch and verif
 
 This approach offers a decentralized, secure, and scalable solution for verifying energy production data, enhancing the trustworthiness and reliability of the mJ token minting process.  Further development and testing are required to implement this integration effectively.
 
-### Issuance of aC as NFTs with Redeemalbe Face Value
+### Issuance of aC as NFTs with Redeemable Face Value
 
 Issuing aC tokens as NFTs with a redeemable face value offers several advantages:
 
