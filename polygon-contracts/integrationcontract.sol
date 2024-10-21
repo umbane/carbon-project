@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./../carboncredits.sol";
-import "./../credittoken.sol";
-import "./Token.sol";
+import "./carboncredits.sol";
+import "./credittoken.sol";
+import "./token.sol";
 
 contract IntegrationContract is CarbonCredits, CreditToken {
     Token public meccToken;
 
+    // Replace with the address of the Token contract deployed on Polygon
     constructor(address _meccTokenAddress) {
         meccToken = Token(_meccTokenAddress);
     }

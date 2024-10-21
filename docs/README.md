@@ -19,7 +19,7 @@ This document outlines the relationships between the Solidity smart contracts: `
 
 ## Overall Architecture
 
-The contracts work together in a layered architecture:
+The contracts in our contracts directory work together in a layered architecture:
 
 1. **Data Management (`carboncredits.sol`):** Provides the core data structures and functions for managing participants in the carbon credit system.
 
@@ -29,7 +29,7 @@ The contracts work together in a layered architecture:
 
 4. **Energy and Carbon Tokenization (`token.sol`):** Manages the mJ and aC tokens, integrating with Chainlink VRF for data verification.
 
-5. **Integration (`integration/IntegrationContract.sol`):** Connects the data management, tokenization, and certification layers with the energy and carbon token contract (`token.sol`), facilitating the exchange between mJ and aC tokens via an external API.
+5. **Integration (`IntegrationContract.sol`):** Connects the data management, tokenization, and certification layers with the energy and carbon token contract (`token.sol`), facilitating the exchange between mJ and aC tokens via an external API.
 
 6. **Pledging (`pledge.sol`):** Allows users to pledge mJ and/or aC tokens to generate CarB tokens, which are then transferred to a designated pledgee via a Pay-it-Forward mechanism. CarB tokens can be used for various purposes, including purchasing goods and services or supporting projects.
 

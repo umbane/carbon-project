@@ -1,6 +1,6 @@
 # Carbon Credits and Energy System
 
-This project integrates a carbon credit system with an energy token system.  The core contracts are detailed in [docs/README.md](docs/README.md), including `carboncredits.sol`, `credittoken.sol`, `certification.sol`, `token.sol`, `integration/IntegrationContract.sol`, and `pledge.sol`.
+This project integrates a carbon credit system with an energy token system.  The core contracts are detailed in [docs/README.md](docs/README.md), including `carboncredits.sol`, `credittoken.sol`, `certification.sol`, `token.sol`, `integration/IntegrationContract.sol`, and `pledge.sol`.  A key feature of this system is the issuance of carbon credits (aC) as NFTs, providing enhanced security and transparency.
 
 # Rationale
 
@@ -15,7 +15,7 @@ Benefits include reward of domestic production irrespective of the feed-in tarif
 * **`credittoken.sol`:** ERC20 token contract for carbon credits, inheriting from `carboncredits.sol`.
 * **`certification.sol`:** Contract for a specific certification standard (e.g., Gold Standard), inheriting from `credittoken.sol`.
 * **`integration/IntegrationContract.sol`:** Contract integrating the carbon credit system with the energy token system.
-* **`token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.
+* **`token.sol`:** Contract for energy (mJ) and carbon credit (aC) tokens.  This contract now supports the issuance of aC tokens as NFTs.
 * **`pledge.sol`:** Contract for pledging mJ and/or aC tokens to generate CarB tokens.
 * **`docs/README.md`:** Detailed documentation for all contracts.
 * **`docs/chainlink_integration.md`:** Documentation for Chainlink oracle integration.
@@ -45,7 +45,6 @@ Refactoring this project to the Polygon network would involve recompiling the co
 
 * Implement the Chainlink oracle integration.
 * Implement the carbon credit gateway API.
-* Merge the [mecc-token/contracts/Token.sol](https://github.com/ubuntupunk/mecc-token/contracts/Token.sol) contract into this project.
 * Further define the relationship between mJ and aC token accrual.
 * Refactor to Polygon network.
 * Draft the various specifications

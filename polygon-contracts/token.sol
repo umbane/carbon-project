@@ -12,7 +12,8 @@ contract Token is ERC20, VRFConsumerBaseV2, ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC20("MyToken", "MTK") ERC721("MyCarbonCredit", "MCC") VRFConsumerBaseV2(0x2Ca8E0C643bDe4C2D8c8B8B77586A8EDd60178B9) {} // Replace with your VRF Coordinator address
+    // Replace with the Polygon VRF Coordinator address
+    constructor() ERC20("MegaJoule", "MJ") ERC721("ACNFT", "AC") VRFConsumerBaseV2(0xYOUR_POLYGON_VRF_COORDINATOR_ADDRESS) {} 
 
     uint256 public mJTotalSupply;
     uint256 public aCTotalSupply;
