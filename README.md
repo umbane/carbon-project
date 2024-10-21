@@ -31,11 +31,11 @@ A `Chainlink oracle` is planned for verifying energy usage data and minting mJ t
 
 A `Data Output Port specification` ([docs/electricity_meter_data_spec.md](docs/electricity_meter_data_spec.md)) is proposed to facilitate data acquisition for the Chainlink oracle.
 
-A method of scraping data from the current metering system utilising ESP32 & MPEG is also proposed.
+A [method of scraping data from the current metering system](docs/prepaid_meter_data_acquisition.md) utilising ESP32 & MPEG is also proposed.
 
 ## Polygon Network Refactoring
 
-Refactoring this project to the Polygon network would involve recompiling the contracts for the Polygon network and deploying them to a Polygon-compatible RPC endpoint.  Key considerations include:
+Refactoring this project to the Polygon network involved recompiling the [contracts for the Polygon network](polygon-contracts/) and deploying them to a Polygon-compatible RPC endpoint.  Key considerations include:
 
 * **Gas Costs:**  Gas costs on Polygon are generally lower than on Ethereum, potentially reducing transaction fees.
 * **Network Compatibility:** Ensure compatibility with Polygon-specific tools and libraries.
@@ -49,3 +49,4 @@ Refactoring this project to the Polygon network would involve recompiling the co
 * Thorough testing and modeling to assess viability.
 * Further define pledge system.
 * Implementation of a verification system.
+* Explore autobidding & time-of-use windows.
