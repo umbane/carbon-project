@@ -1,93 +1,84 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol';
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-//SPDX-License-Identifier: UNLICENSED
 contract CarbonCredits is Ownable {
+    uint256 public totalRegistered;
+    uint256 public verifierCount;
+    uint256 public customerCount;
 
-uint totalRegistered = 0;
-uint verifiercount=0;
-uint customercount = 0;
-struct CarbonCreditHolder {
-    string name;
-    uint id;
-    uint holderId;
-    uint creditsHeld;
-    uint pricepercredit;
-    uint creditvalidityperiod;
-    address _addr;
-}
-struct verifier {
-    string name;
-    string homeCountry;
-    uint reg_no;
-    uint license_no;
-    address addr;
-    bool isExist;
-}
-struct customer {
-    string first_name;
-    string last_name;
-    string email;
-    uint contact;
-    uint _id;
-}
-mapping (uint => CarbonCreditHolder) public CreditHolders;
-mapping (uint => verifier) public verifiers;
-mapping(uint => customer) public customers;
-
-
-event newCreditHolder(string name, uint holderId, uint creditsHeld, uint pricepercredit, uint creditvalidityperiod, address _addr);
-
-function registerCreditHolder(string memory name, uint holderId, uint creditsHeld, uint pricepercredit, uint creditvalidityperiod) public {
-    totalRegistered++;
-    CreditHolders[totalRegistered] = CarbonCreditHolder(
-        name,
-        totalRegistered,
-        holderId,
-        creditsHeld,
-        pricepercredit,
-        creditvalidityperiod,
-        msg.sender);
-    emit newCreditHolder(name, holderId, creditsHeld, pricepercredit,creditvalidityperiod, msg.sender);
-}
-function registerVerifiers(string memory name, string memory homeCountry, uint reg_no, uint license_no) public {
-        verifiercount++;
-        // check if verifier exist already
-        require(verifiers[reg_no].isExist==false, "validator already registered");
-        // require(license_no == ISO database, "you dont have a license to operate");
-        verifiers[verifiercount]=verifier(name,homeCountry,reg_no,license_no,msg.sender,true);
-}
-function registerCustomer(string memory first_name, string memory last_name, string memory email, uint contact) public{
-    customercount++;
-    customers[customercount] = customer(
-        first_name,
-        last_name,
-        email,
-        contact,
-        customercount);
-}
-function getVerifiers() public view returns (verifier[] memory){
-    verifier[] memory ret = new verifier[](verifiercount);
-    for (uint i = 0; i < verifiercount; i++) {
-        ret[i] = verifiers[i];
+    struct CarbonCreditHolder {
+        string name;
+        uint256 id;
+        uint256 holderId;
+        uint256 creditsHeld;
+        uint256 pricePerCredit;
+        uint256 creditValidityPeriod;
+        address payable addr;
     }
-    return ret;
-}
-function getCreditHoilders() public view returns (CarbonCreditHolder[] memory){
-    CarbonCreditHolder[] memory ret = new CarbonCreditHolder[](verifiercount);
-    for (uint i = 0; i < totalRegistered; i++) {
-        ret[i] = CreditHolders[i];
+
+    struct Verifier {
+        string name;
+        string homeCountry;
+        uint256 regNo;
+        uint256 licenseNo;
+        address addr;
+        bool isExist;
     }
-    return ret;
-}
-function getCustomerProfile(address _owner) public view onlyOwner() returns(customer[] memory) {
-    _owner = msg.sender;
-    customer[] memory result = new customer[](customercount);
-    for (uint i = 0; i<customercount; i++){
-        result[i] = customers[i];
+
+    struct Customer {
+        string firstName;
+        string lastName;
+        string email;
+        uint256 contact;
+        uint256 id;
     }
-    return result;
-}
-  
+
+    mapping(uint256 => CarbonCreditHolder) public creditHolders;
+    mapping(uint256 => Verifier) public verifiers;
+    mapping(uint256 => Customer) public customers;
+
+    event NewCreditHolder(string name, uint256 holderId, uint256 creditsHeld, uint256 pricePerCredit, uint256 creditValidityPeriod, address indexed addr);
+
+    function registerCreditHolder(string memory name, uint256 holderId, uint256 creditsHeld, uint256 pricePerCredit, uint256 creditValidityPeriod) public {
+        totalRegistered++;
+        creditHolders[totalRegistered] = CarbonCreditHolder(name, totalRegistered, holderId, creditsHeld, pricePerCredit, creditValidityPeriod, payable(msg.sender));
+        emit NewCreditHolder(name, holderId, creditsHeld, pricePerCredit, creditValidityPeriod, msg.sender);
+    }
+
+    function registerVerifier(string memory name, string memory homeCountry, uint256 regNo, uint256 licenseNo) public {
+        verifierCount++;
+        require(verifiers[regNo].isExist == false, "Verifier already registered");
+        verifiers[verifierCount] = Verifier(name, homeCountry, regNo, licenseNo, msg.sender, true);
+    }
+
+    function registerCustomer(string memory firstName, string memory lastName, string memory email, uint256 contact) public {
+        customerCount++;
+        customers[customerCount] = Customer(firstName, lastName, email, contact, customerCount);
+    }
+
+    function getVerifiers() public view returns (Verifier[] memory) {
+        Verifier[] memory ret = new Verifier[](verifierCount);
+        for (uint256 i = 0; i < verifierCount; i++) {
+            ret[i] = verifiers[i + 1]; // Adjust index to start from 1
+        }
+        return ret;
+    }
+
+    function getCreditHolders() public view returns (CarbonCreditHolder[] memory) {
+        CarbonCreditHolder[] memory ret = new CarbonCreditHolder[](totalRegistered);
+        for (uint256 i = 0; i < totalRegistered; i++) {
+            ret[i] = creditHolders[i + 1]; // Adjust index to start from 1
+        }
+        return ret;
+    }
+
+    function getCustomers() public view returns (Customer[] memory) {
+        Customer[] memory result = new Customer[](customerCount);
+        for (uint256 i = 0; i < customerCount; i++) {
+            result[i] = customers[i + 1]; // Adjust index to start from 1
+        }
+        return result;
+    }
 }

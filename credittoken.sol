@@ -1,65 +1,72 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-import './carboncredits.sol';
-import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol';
+import "./carboncredits.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-//SPDX-License-Identifier: UNLICENSED
-contract CreditToken is CarbonCredits,ERC20{
-    uint totalsupply;
-    uint supply;
-    uint tokenBurnedCount =0;
-    uint8 private _decimals;
-    
+contract CreditToken is CarbonCredits, ERC20 {
+    uint256 public totalSupply;
+    uint256 public supply;
+    uint256 public tokenBurnedCount;
+
     constructor() ERC20("Carbon", "C") public {
         _setupDecimals(0);
     }
-    mapping(address => uint) public BalanceOf;
-    mapping(address => uint) public approvedCredits;
-    mapping(address => uint) public tokensApprovedForBurn;
+
+    mapping(address => uint256) public balanceOf;
+    mapping(address => uint256) public approvedCredits;
+    mapping(address => uint256) public tokensApprovedForBurn;
+
     modifier onlyVerifier() {
-        require(msg.sender == verifiers[verifiercount].addr);
+        require(msg.sender == verifiers[verifierCount].addr, "Only verifiers can call this function");
         _;
-    }
-    modifier onlyCreditHolder() {
-        require(msg.sender == CreditHolders[totalRegistered]._addr);
-        _;
-    }
-    function approveCreditsHeld(address _holder) public onlyVerifier{
-        uint cred = CreditHolders[totalRegistered].creditsHeld;
-        approvedCredits[_holder]+= cred;
     }
 
-    function createCarbonToken() public onlyCreditHolder() returns(uint) {
-        address Owner = CreditHolders[totalRegistered]._addr;
-        supply = approvedCredits[Owner];
-        totalsupply = totalsupply.add(supply);
-        BalanceOf[Owner] = BalanceOf[Owner].add(supply);
+    modifier onlyCreditHolder() {
+        require(msg.sender == creditHolders[totalRegistered].addr, "Only credit holders can call this function");
+        _;
+    }
+
+    function approveCreditsHeld(address _holder) public onlyVerifier {
+        uint256 cred = creditHolders[totalRegistered].creditsHeld;
+        approvedCredits[_holder] += cred;
+    }
+
+    function createCarbonToken() public onlyCreditHolder returns (uint256) {
+        address owner = creditHolders[totalRegistered].addr;
+        supply = approvedCredits[owner];
+        totalSupply = totalSupply + supply;
+        balanceOf[owner] = balanceOf[owner] + supply;
         _mint(msg.sender, supply);
-        return totalsupply;
+        return totalSupply;
     }
-    function transferCredits(address to, uint value) public  onlyCreditHolder() {
+
+    function transferCredits(address to, uint256 value) public onlyCreditHolder {
         _transfer(msg.sender, to, value);
-        BalanceOf[msg.sender] = BalanceOf[msg.sender].sub(value);
-        BalanceOf[to] = BalanceOf[to].add(value);
+        balanceOf[msg.sender] = balanceOf[msg.sender] - value;
+        balanceOf[to] = balanceOf[to] + value;
     }
-    function transferCreditsFrom(address from, address to, uint value) public {
+
+    function transferCreditsFrom(address from, address to, uint256 value) public {
         transferFrom(from, to, value);
-        BalanceOf[from] = BalanceOf[from].sub(value);
-        BalanceOf[to] = BalanceOf[to].add(value);
+        balanceOf[from] = balanceOf[from] - value;
+        balanceOf[to] = balanceOf[to] + value;
     }
-    function approveBurn(uint carbonTokens, address holder) public onlyVerifier{
-        tokensApprovedForBurn[holder]+=carbonTokens;
+
+    function approveBurn(uint256 carbonTokens, address holder) public onlyVerifier {
+        tokensApprovedForBurn[holder] += carbonTokens;
     }
-    function burnTokens() public onlyOwner() returns(bool) {
+
+    function burnTokens() public onlyOwner returns (bool) {
         _burn(msg.sender, tokensApprovedForBurn[msg.sender]);
-        totalsupply = totalsupply.sub(tokensApprovedForBurn[msg.sender]);
-        BalanceOf[msg.sender] = BalanceOf[msg.sender].sub(tokensApprovedForBurn[msg.sender]);
+        totalSupply = totalSupply - tokensApprovedForBurn[msg.sender];
+        balanceOf[msg.sender] = balanceOf[msg.sender] - tokensApprovedForBurn[msg.sender];
         return true;
     }
-    function buyCarbonCredits(uint amount) public payable {
-        uint value = amount * 1;
-        require(msg.value > 0);
-        transferCreditsFrom(address(this),msg.sender, value);
-        }
 
+    function buyCarbonCredits(uint256 amount) public payable {
+        uint256 value = amount * 1;
+        require(msg.value > 0, "Value must be greater than zero");
+        transferCreditsFrom(address(this), msg.sender, value);
+    }
 }

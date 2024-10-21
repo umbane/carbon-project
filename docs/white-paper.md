@@ -202,7 +202,7 @@ This approach involves integrating a Chainlink oracle network to fetch and verif
 
 This approach offers a decentralized, secure, and scalable solution for verifying energy production data, enhancing the trustworthiness and reliability of the mJ token minting process.  Further development and testing are required to implement this integration effectively.
 
-### Issuance of aC as NFTs with Redeemable Face Value
+### Issuance of aC as NFTs with Redeemalbe Face Value
 
 Issuing aC tokens as NFTs with a redeemable face value offers several advantages:
 
@@ -246,6 +246,22 @@ Managing liquidity pools and scaling the system to handle a large number of user
 * **Off-Chain Data Storage:**  Storing non-critical data off-chain can reduce the burden on the blockchain and improve efficiency.
 
 These strategies will ensure the system's scalability and ability to handle a growing user base and increasing transaction volume.
+
+### Contract Modifications for aC as NFTs
+
+To support the issuance of aC tokens as NFTs, the `token.sol` contract needs significant modification.  Currently, it uses the ERC20 standard.  To support NFTs, it should incorporate the ERC721 standard.  This would involve:
+
+1. **Inheriting ERC721:** The contract should inherit from an ERC721 contract (e.g., OpenZeppelin's ERC721).
+
+2. **New Functions:**  New functions for minting, burning, and managing aC tokens as NFTs would need to be added.
+
+3. **Data Structures:**  Appropriate data structures would need to be implemented to store NFT metadata (e.g., carbon credit details).
+
+4. **`mintAC` Modification:** The `mintAC` function would need to be modified to mint ERC721 tokens instead of ERC20 tokens.
+
+5. **`aCTotalSupply` Update:** The `aCTotalSupply` variable would need to track the number of minted NFTs.
+
+These modifications are crucial for implementing the NFT-based aC token system.  Further design and implementation details will be documented separately.
 
 ### Verification of Energy Production
 
