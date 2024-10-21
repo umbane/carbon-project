@@ -1,4 +1,4 @@
-::: mermaid
+``` mermaid
 
 %%{
   init: {
@@ -47,4 +47,5 @@ graph LR
 
     class H,J token;
     class F oracle;
-:::
+
+```

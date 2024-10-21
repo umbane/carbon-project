@@ -1,4 +1,4 @@
-::: mermaid
+``` mermaid
 
 %%{
   init: {
@@ -35,4 +35,5 @@ graph LR
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style I fill:#ccf,stroke:#333,stroke-width:2px
     linkStyle 0,1,2,3,4,5,6,7 stroke:#666,stroke-width:2px
-:::
+
+```
