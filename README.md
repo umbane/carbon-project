@@ -20,6 +20,7 @@ Benefits include reward of domestic production irrespective of the feed-in tarif
 * **`docs/README.md`:** Detailed documentation for all contracts.
 * **`docs/chainlink_integration.md`:** Documentation for Chainlink oracle integration.
 * **`docs/system_diagram.md`:** Mermaid diagram visualizing the contract system.
+* **`docs/electricity_meter_data_spec.md`:** Specification for electricity meter data output port.
 * **`docs/white-paper.md`:** MECC White Paper
 
 ## Integration Details
@@ -28,7 +29,7 @@ The `IntegrationContract.sol` facilitates the interaction between the carbon cre
 
 A `Chainlink oracle` is planned for verifying energy usage data and minting mJ tokens.
 
-A `Data Output Port specification` is also proposed alongside Open Net Metering which may facilitate the future progress of this project
+A `Data Output Port specification` ([docs/electricity_meter_data_spec.md](docs/electricity_meter_data_spec.md)) is proposed to facilitate data acquisition for the Chainlink oracle.
 
 A method of scraping data from the current metering system utilising ESP32 & MPEG is also proposed.
 
