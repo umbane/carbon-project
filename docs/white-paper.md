@@ -36,7 +36,7 @@ In order to correct these deficiencies in public policy we initially aimed to cr
 
 We will keep our initial ideas active inside our white paper, in order to note them for future discussion, but for now, our aim is to simplify not complicate our utility.
 
-In summary our collective scheme **books one unit for every unit added to the common pool**  not just the City grid. 
+> In summary our collective scheme **books one unit for every unit added to the common pool**  not just the City grid. 
 
 We need to note here a pledge model is considered allowing actual energy to be pledged to our scheme, and in return an audit of one offset reward for every offset gained, and treated accordingly, but we will leave this thread for later.
 
@@ -86,7 +86,7 @@ Once a credit is booked on the system, in the form of mJ exchanged for aC, it co
 
 In fact, if we encounter which prevent us from fully auditing the generation and creation of mJ, then aC+ and CarB may represent a fall-back strategy. But for now let us assume we are able to gather all the data and input all the proof of work and pledges into our systems in the format intended, and without any restrictions on this activity by the powers that be. 
 
-NOTE: Chainlink Oracles have been proposed as the solution to independent data varification and represent a stream of data required for each token to come into being.
+> NOTE: Chainlink Oracles have been proposed as the solution to independent data varification and represent a stream of data required for each token to come into being.
 
 #### Carbon Credit rev
 
@@ -100,6 +100,8 @@ cArb (cA+mj) Tokens would always be issued based upon the total resource created
 
 All tokens on the system would thus form the basis for a virtualised utility, a virtual power station providing payments and energy and even services on the system, rolled out as a cooperatively owned, community-focused, virtual power utility, providing access to community financing, home appliances and other financing options?
 
+> NOTE: Watts are defined as 1 Watt = 1 Joule per second (1W = 1 J/s) which means that 1 kW = 1000 J/s. A Watt is the amount of energy (in Joules) that an electrical device (such as a light) is burning per second that it's running. So a 60W bulb is burning 60 Joules of energy every second you have it turned on
+
 ### Onboarding Pledges & Smart Contracts
 
 Until such time as there is a dedicated mJ metre, a compliant data output port or socket specification, that coexists on a DB board alongside the City feed-in metre, methods of extrapolating and inputing data into the system need to be considered.
@@ -112,9 +114,7 @@ Until such time as there is a dedicated mJ metre, a compliant data output port o
 
 4. How are we to create additional network and gateway entry and exit points?
 
-#### Note: Can we generate a specification for future net-metering that will allow us to co-exist with officialdom? 
-
-#### We must advocate for Open Source Data, and Open Spec Metering!
+> NOTE: Can we generate a specification for future net-metering that will allow us to co-exist with officialdom? We must advocate for Open Source Data, and Open Spec Metering!
 
 ### Net-metering Use Case. Open Metering vs Closed Metering
 
