@@ -22,6 +22,11 @@ Benefits include reward of domestic electricity production irrespective of the f
 * **`docs/system_diagram.md`:** Mermaid diagram visualizing the contract system.
 * **`docs/electricity_meter_data_spec.md`:** Specification for electricity meter data output port.
 * **`docs/white-paper.md`:** MECC White Paper
+* **`docs/prepaid_meter_data_acquisition.md`:** Documentation for data acquisition from prepaid meters.
+* **`docs/esp32_data_acquisition_diagram.md`:** Mermaid diagram visualizing the ESP32 data acquisition system.
+* **`esp32_firmware/main.cpp`:** ESP32 firmware for data acquisition.
+* **`open-meter/README.md`:** Open-meter project for electricity meter data acquisition.
+* **`open-meter/main.cpp`:** ESP32 firmware for data acquisition.
 
 ## Integration Details
 
@@ -121,5 +126,5 @@ graph LR
 * Further define the relationship between mJ and aC token accrual.
 * Thorough testing and modeling to assess viability.
 * Further define pledge system.
-* Implementation of a verification system.
+* Implementation of an 'honest-broker' verification system.
 * Explore autobidding & time-of-use windows.

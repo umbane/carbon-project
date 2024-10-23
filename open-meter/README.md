@@ -30,29 +30,29 @@ graph TD
     B --> C[Metering Device];
     C --> D[ESP32 + Camera];
     D --> E[Data Processing];
-    E --> F{Chainlink Oracle};
+    E --> F[Chainlink Oracle];
     F --> G[Smart Contracts];
     G --> H[Home Assistant];
     G --> I[Internet];
 
-    style A fill:#ccf,stroke:#333,stroke-width:2px;
-    style B fill:#ccf,stroke:#333,stroke-width:2px;
-    style C fill:#ccf,stroke:#333,stroke-width:2px;
-    style D fill:#ccf,stroke:#333,stroke-width:2px;
-    style E fill:#ccf,stroke:#333,stroke-width:2px;
-    style F fill:#ccf,stroke:#333,stroke-width:2px;
-    style G fill:#ccf,stroke:#333,stroke-width:2px;
-    style H fill:#ccf,stroke:#333,stroke-width:2px;
-    style I fill:#ccf,stroke:#333,stroke-width:2px;
+    style A fill:#ccf,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#ccf,stroke:#333,stroke-width:2px
+    style F fill:#ccf,stroke:#333,stroke-width:2px
+    style G fill:#ccf,stroke:#333,stroke-width:2px
+    style H fill:#ccf,stroke:#333,stroke-width:2px
+    style I fill:#ccf,stroke:#333,stroke-width:2px
 
-    linkStyle 0,1,2,3,4,5,6,7,8 stroke:#666,stroke-width:2px;
+    linkStyle 0,1,2,3,4,5,6,7,8 stroke:#666,stroke-width:2px
 
     classDef token fill:#ccf,stroke:#333,stroke-width:2px;
     classDef nft fill:#ccf,stroke:#333,stroke-width:2px;
     classDef oracle fill:#ccf,stroke:#333,stroke-width:2px;
-
+    
     class C,G token;
-    class F oracle;
+    class F oracle; 
 ```
 
 ### Gerber File
