@@ -11,6 +11,20 @@ This document outlines the specifications for building a separate metering devic
 The circuit diagram for the metering device is provided below. This diagram includes all the necessary components and their connections.
 
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#BB2528',
+      'primaryTextColor': '#fff',
+      'primaryBorderColor': '#7C0000',
+      'lineColor': '#F8B229',
+      'secondaryColor': '#006100',
+      'tertiaryColor': '#fff'
+    }
+  }
+}%%
+
 graph TD
     A[Solar Panels] --> B[Inverter];
     B --> C[Metering Device];

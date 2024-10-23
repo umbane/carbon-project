@@ -2,7 +2,9 @@
 
 ## Overview
 
-This repository contains the firmware for the ESP32 microcontroller used in the solar power metering system. The firmware is designed to capture images of the meter's LCD screen, process the data, and transmit it to a server via Wi-Fi.
+This repository contains the firmware for the ESP32 microcontroller used in the solar power metering system. The firmware is designed to capture images of the meter's LCD screen, process the data, and transmit it to a server via Wi-Fi. In addition, it includes a voltage and current sensor module to measure the voltage and current. This provides a backup for the data captured by the camera. It also allows the addition of a seperate pcb for the voltage and current sensor, since not all current will necessarily be metered by the City Power. Users can independently measure the voltage and current, and the data will be transmitted to the server.
+
+> **Note"** This firmware is primarly designed to work with the ESP32 microcontroller and the OV2640 camera module. Supporting the secondary measurement circuit of the actual production of home solar power has yet to be implemented. It is also not currently able to provide verification of the data thus accumulated. We are exploring alternative methods of gaining community verification of the data via some form of honest broker that would audit the system capacity to ensure that the data is accurate, and that the data is not tampered with. If you have any ideas, please feel free to engage.
 
 ## Hardware Components
 
@@ -20,7 +22,7 @@ This repository contains the firmware for the ESP32 microcontroller used in the 
   - Data extraction logic (parsing the processed image to extract relevant data fields).
   - Network communication functions (sending data to a server via Wi-Fi).
 
-## Data Acquisition Process
+## Primary Data Acquisition Process
 
 1. **Image Capture:** The ESP32's camera module captures an image of the meter's LCD screen at regular intervals (e.g., every 5 minutes).
 2. **Image Processing:** The captured image is processed using image enhancement techniques (e.g., noise reduction, contrast adjustment) to improve the quality of the text. Optical Character Recognition (OCR) is then used to extract the text from the image.
@@ -28,7 +30,14 @@ This repository contains the firmware for the ESP32 microcontroller used in the 
 4. **Data Transmission:** The extracted data is transmitted to the server-side application via Wi-Fi using a suitable communication protocol (e.g., MQTT, HTTP).
 5. **Data Processing and Storage:** The server-side application receives, validates, and stores the data. The data is then forwarded to Home Assistant and the Chainlink oracle as needed.
 
-## Data Format
+## Secondary Data Acquisition Process
+
+1. **Voltage and Current Measurement:** The voltage and current sensors measure the voltage and current in the solar power system.
+2. **Data Transmission:** The measured voltage and current data is transmitted to the server-side application via Wi-Fi using a suitable communication protocol (e.g., MQTT, HTTP).
+3. **Data Processing and Storage:** The server-side application receives, validates, and stores the data. The data is then forwarded to Home Assistant and the Chainlink oracle as needed.
+
+
+## Data Format for Primary Data Acquisition
 
 The data transmitted to the server will be in JSON format:
 
@@ -43,6 +52,18 @@ The data transmitted to the server will be in JSON format:
 }
 ```
 
+## Data Format for Secondary Data Acquisition
+
+```json
+{
+  "Voltage": 220.5,
+  "Current": 10.2,
+  "Timestamp": "2024-07-26T10:30:00",
+  "ErrorCode": 0
+} 
+```
+
+
 ## Error Handling
 
 The system should include robust error handling mechanisms to address potential issues such as:
@@ -50,12 +71,23 @@ The system should include robust error handling mechanisms to address potential 
 - Camera errors (e.g., image capture failure).
 - OCR errors (e.g., text extraction failure).
 - Network communication errors (e.g., connection failure).
+- Data transmission errors.
+- Sensor Error
 
 Error codes should be defined and transmitted along with the data.
 
 ## Security Considerations
 
 Security measures should be implemented to protect the data during transmission and storage. This may include encryption and authentication mechanisms.
+
+> **Note:** Will our ESP32 be used to encrypt data or will this be done via edge-hosted services, for example a Home Assistant device that is connected to the ESP32?
+
+## Testing and Validation
+
+The system should undergo thorough testing and validation to ensure its accuracy and reliability. This includes testing the image processing algorithms, data extraction logic, and network communication.
+## Deployment
+
+Deploy the ESP32-based meter reading system to the solar power system. Ensure that the system is properly configured and connected to the necessary hardware components.
 
 ## Future Considerations
 
