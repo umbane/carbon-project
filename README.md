@@ -8,7 +8,9 @@ Currently City of Cape Town (CoCT) electricity users may feed electricity into t
 
 We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk, Cape Town Stock Exchange or other carbon trading projects.
 
-Benefits include reward of domestic electricity production irrespective of the feed-in tariff, and ability to pledge and store tokens for future economic advantage. See our [white paper](https://github.com/Muizenberg-Electricity-Cooperative/Carbon-Project/blob/main/docs/white-paper.md)
+Benefits include reward of domestic electricity production irrespective of the feed-in tariff, and ability to pledge and store tokens for future economic advantage. 
+
+Read our [white paper](https://github.com/Muizenberg-Electricity-Cooperative/Carbon-Project/blob/main/docs/white-paper.md) if you want to understand how we got to this point.
 ## Project Structure
 
 * **`carboncredits.sol`:** Core contract for managing carbon credit holders, verifiers, and customers.
