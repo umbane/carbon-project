@@ -36,8 +36,15 @@ graph TD
     G --> I[Internet];
 
     style A fill:#ccf,stroke:#333,stroke-width:2px;
+    style B fill:#ccf,stroke:#333,stroke-width:2px;
     style C fill:#ccf,stroke:#333,stroke-width:2px;
+    style D fill:#ccf,stroke:#333,stroke-width:2px;
+    style E fill:#ccf,stroke:#333,stroke-width:2px;
+    style F fill:#ccf,stroke:#333,stroke-width:2px;
     style G fill:#ccf,stroke:#333,stroke-width:2px;
+    style H fill:#ccf,stroke:#333,stroke-width:2px;
+    style I fill:#ccf,stroke:#333,stroke-width:2px;
+
     linkStyle 0,1,2,3,4,5,6,7,8 stroke:#666,stroke-width:2px;
 
     classDef token fill:#ccf,stroke:#333,stroke-width:2px;
