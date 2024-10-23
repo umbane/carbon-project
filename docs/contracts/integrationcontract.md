@@ -5,16 +5,16 @@ The `IntegrationContract` contract acts as an integration point between the `Car
 ## Key Features
 
 *   **Dependency on Other Contracts:** This contract depends on the `CarbonCredits`, `CreditToken`, and `Token` contracts.  Its functionality is directly tied to the functionality of these contracts.
-*   **ACNFT Minting:** The `accrueAC` function mints AC NFTs (presumably representing carbon credits) based on the number of carbon credits issued.
-*   **MJ to AC Conversion:** The `processMJForAC` function attempts to convert MJ tokens (presumably representing some form of energy or currency) into AC NFTs.  This conversion involves an interaction with an external API (`carbonCreditGatewayAPI`).
-*   **External API Interaction:** The `carbonCreditGatewayAPI` function is a placeholder for an API call that verifies the MJ tokens before minting AC NFTs.  This function needs to be implemented to interact with a real-world API.
+*   **aCNFT Minting:** The `accrueAC` function mints aC NFTs (presumably representing carbon credits) based on the number of carbon credits issued.
+*   **mJ to aC Conversion:** The `processMJForAC` function attempts to convert mJ tokens (presumably representing some form of energy or currency) into aC NFTs.  This conversion involves an interaction with an external API (`carbonCreditGatewayAPI`).
+*   **External API Interaction:** The `carbonCreditGatewayAPI` function is a placeholder for an API call that verifies the mJ tokens before minting aC NFTs.  This function needs to be implemented to interact with a real-world API.
 *   **Ownership Restriction:**  All functions are restricted to the contract owner (`onlyOwner` modifier).
 
 ## Functions
 
-*   `accrueAC`: Mints AC NFTs based on carbon credits issued.
-*   `processMJForAC`: Attempts to convert MJ tokens to AC NFTs using an external API.
-*   `carbonCreditGatewayAPI`: A placeholder function for interacting with an external API to verify MJ tokens.  This function needs to be implemented.
+*   `accrueAC`: Mints aC NFTs based on carbon credits issued.
+*   `processMJForAC`: Attempts to convert mJ tokens to aC NFTs using an external API.
+*   `carbonCreditGatewayAPI`: A placeholder function for interacting with an external API to verify mJ tokens.  This function needs to be implemented.
 
 ## Important Considerations
 
