@@ -1,4 +1,4 @@
-# Community Carbon Credits and Energy System
+# Community Carbon Credits and Blockchain Energy System
 
 This project integrates a carbon credit system with an energy token system.  The core contracts are detailed in [docs/README.md](docs/README.md), including `carboncredits.sol`, `credittoken.sol`, `certification.sol`, `token.sol`, `integration/IntegrationContract.sol`, and `pledge.sol`.  A key feature of this system is the issuance of carbon credits (aC) as NFTs, providing enhanced security and transparency.
 
