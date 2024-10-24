@@ -47,6 +47,8 @@ Refactoring this project to the Polygon network involved recompiling the [contra
 * **Gas Costs:**  Gas costs on Polygon are generally lower than on Ethereum, potentially reducing transaction fees.
 * **Network Compatibility:** Ensure compatibility with Polygon-specific tools and libraries.
 * **Bridge Considerations:**  If any existing contracts are deployed on Ethereum, a bridge mechanism might be needed to transfer tokens or data between networks.  Since this project is not yet deployed, this is not a current concern.
+* **Testing:**  Ensure that tests are compatible with Polygon's environment.
+* **Polygon is Carbon Neutral:** Polygon is carbon neutral, which is a significant consideration for projects aiming to be environmentally conscious.
 
 ## Diagram of our System
 You can view a [mermaid diagram of our system here](docs/benefit_loop_diagram.md), alongside other diagrams in our [schematics folder](docs/schematics/).
@@ -130,6 +132,8 @@ graph LR
 * Further define pledge system.
 * Implementation of an 'honest-broker' verification system.
 * Explore autobidding & time-of-use windows.
+* Implementing aC as a governance token within a DAO. 
+* Holders of aC NFTs will possess right to vote on DAO decisions.
 
 ## Getting Started
 
