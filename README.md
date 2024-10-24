@@ -130,3 +130,27 @@ graph LR
 * Further define pledge system.
 * Implementation of an 'honest-broker' verification system.
 * Explore autobidding & time-of-use windows.
+
+## Getting Started
+
+To get started with the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/umbane/carbon-project.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd carbon-project
+   ```
+3. Explore the project structure and documentation.
+
+## Contributing
+
+We welcome contributions to the project. Please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your branch to your fork.
+5. Create a pull request to the main repository.
