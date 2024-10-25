@@ -29,7 +29,8 @@ City Policy as it stands, assumes a one-to-one relationship where every home has
 ## A Blockchain approach to a solution
 
 
-```mermaid
+::: mermaid
+
 %%{
   init: {
     'theme': 'base',
@@ -96,14 +97,14 @@ graph LR
     style A fill:#ccf,stroke:#333,stroke-width:2px
     style J fill:#ccf,stroke:#333,stroke-width:2px
     style G fill:#ccf,stroke:#333,stroke-width:2px
-```
 
+:::
 
 Our proposed system initially involved an abstraction of the tariff structure as it stood. This meant that nothing further would be required from the City other than an endorsement of our plan, and we would thus take the feed-in tariff as our baseline, a known quantity.
 
 As our system developed we realised that we could bypass the feed-in tariff, making it unnecessary to concern ourselves with the City. Our system primarly focuses on creating an 'Oracle of Data' based upon varifiable domestic production of watts.
 
-In order to correct these deficiencies in public policy we initially aimed to create a pool into which ‘*prosumers*’ already servicing the City could pledge a proportion up to 100% of their output in the form of the feed-in-tariff rebate. But since this would mean those who are not able to feed-into-the-grid were left out, our latest iteration of our proposal relies soley upon **varified production of electricity eligible for carbon credits**.
+In order to correct these deficiencies in public policy we initially aimed to create a pool into which ‘*prosumers*’ already servicing the City could pledge a proportion up to 100% of their output in the form of the feed-in-tariff rebate. But since this would mean those who are not able to feed-into-the-grid were left out, our latest iteration of our proposal relies soley upon **verified production of electricity eligible for carbon credits**.
 
 We will keep our initial ideas active inside our white paper, in order to note them for future discussion, but for now, our aim is to simplify not complicate our utility.
 
