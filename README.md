@@ -40,9 +40,11 @@ The `IntegrationContract.sol` facilitates the interaction between the carbon cre
 
 A `Chainlink oracle` is planned for verifying energy usage data and minting mJ tokens.
 
-A `Data Output Port specification` ([docs/electricity_meter_data_spec.md](docs/electricity_meter_data_spec.md)) is proposed to facilitate data acquisition for the Chainlink oracle.
+A `Data Output Port specification` ([docs/electricity_meter_data_spec.md](docs/electricity_meter_data_spec.md)) is proposed to facilitate data acquisition for the Chainlink oracle in terms of future public policy.
 
-A [method of scraping data from the current metering system](docs/prepaid_meter_data_acquisition.md) utilising ESP32 & MPEG is also proposed.
+A [method of scraping data from the current metering system](docs/prepaid_meter_data_acquisition.md) utilising ESP32 & MPEG is proposed given the current state of the prepaid metering system.
+
+An independent DIY `open-meter` PCB project is proposed to facilitate data acquisition from home solar arrays. The gerbers have yet to be generated.
 
 ## Polygon Network Refactoring
 
