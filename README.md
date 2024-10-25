@@ -164,3 +164,6 @@ We welcome contributions to the project. Please follow these guidelines:
 3. Make your changes and commit them with descriptive commit messages.
 4. Push your branch to your fork.
 5. Create a pull request to the main repository.
+
+## License
+This project is licensed under the [GNU General Public License v3.0](LICENSE).
