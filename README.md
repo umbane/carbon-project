@@ -137,7 +137,7 @@ graph LR
 * Implementation of an 'honest-broker' verification system.
 * Explore autobidding & time-of-use windows.
 * Implementing aC as a governance token within a DAO. 
-* Holders of aC NFTs will possess right to vote on DAO decisions.
+* Outline how holders of aC NFTs will possess right to vote on DAO decisions.
 
 ## Getting Started
 
