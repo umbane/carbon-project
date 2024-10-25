@@ -10,49 +10,45 @@ This document outlines the specifications for building a separate metering devic
 
 The circuit diagram for the metering device is provided below. This diagram includes all the necessary components and their connections.
 
-```mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#BB2528',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#7C0000',
-      'lineColor': '#F8B229',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff'
-    }
-  }
-}%%
+```plantuml
+@startuml
+skinparam defaultTextAlignment center
+skinparam linetype ortho
 
-graph TD
-    A[Solar Panels] --> B[Inverter];
-    B --> C[Metering Device];
-    C --> D[ESP32 + Camera];
-    D --> E[Data Processing];
-    E --> F[Chainlink Oracle];
-    F --> G[Smart Contracts];
-    G --> H[Home Assistant];
-    G --> I[Internet];
+rectangle "Solar Panels" as SolarPanels #lightgreen
+rectangle "Inverter" as Inverter #lightblue
+rectangle "Open Meter" as OpenMeter #lightyellow
+rectangle "ESP32" as ESP32 #lightcoral
+rectangle "Camera" as Camera #lightgray
+rectangle "Data Processing" as DataProcessing #lightcyan
+rectangle "Chainlink Oracle" as ChainlinkOracle #lightpink
+rectangle "Smart Contracts" as SmartContracts #lightorange
+rectangle "Home Assistant" as HomeAssistant #lightpurple
+rectangle "Internet" as Internet #lightblue
 
-    style A fill:#ccf,stroke:#333,stroke-width:2px
-    style B fill:#ccf,stroke:#333,stroke-width:2px
-    style C fill:#ccf,stroke:#333,stroke-width:2px
-    style D fill:#ccf,stroke:#333,stroke-width:2px
-    style E fill:#ccf,stroke:#333,stroke-width:2px
-    style F fill:#ccf,stroke:#333,stroke-width:2px
-    style G fill:#ccf,stroke:#333,stroke-width:2px
-    style H fill:#ccf,stroke:#333,stroke-width:2px
-    style I fill:#ccf,stroke:#333,stroke-width:2px
+SolarPanels --> Inverter : Energy
+Inverter --> OpenMeter : DC Voltage, Current
+OpenMeter --> ESP32 : Analog Data
+ESP32 --> Camera : Image Data
+ESP32 --> DataProcessing : Processed Data
+DataProcessing --> ChainlinkOracle : Data
+ChainlinkOracle --> SmartContracts : Verified Data
+SmartContracts --> HomeAssistant : Tokenized Energy
+SmartContracts --> Internet : Data
 
-    linkStyle 0,1,2,3,4,5,6,7,8 stroke:#666,stroke-width:2px
+note right of SmartContracts
+  Carbon Credits (aC), Energy Tokens (mJ)
+end note
 
-    classDef token fill:#ccf,stroke:#333,stroke-width:2px;
-    classDef nft fill:#ccf,stroke:#333,stroke-width:2px;
-    classDef oracle fill:#ccf,stroke:#333,stroke-width:2px;
-    
-    class C,G token;
-    class F oracle; 
+note right of HomeAssistant
+  Energy Consumption Monitoring
+end note
+
+note right of Internet
+  Cloud Platform, Data Storage
+end note
+
+@enduml
 ```
 
 ### Gerber File
