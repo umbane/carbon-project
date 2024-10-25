@@ -11,6 +11,10 @@ We propose the addition of a blockchain token (mJ) which is minted whenever ther
 Benefits include reward of domestic electricity production irrespective of the feed-in tariff, and ability to pledge and store tokens for future economic advantage. 
 
 Read our [white paper](https://github.com/Muizenberg-Electricity-Cooperative/Carbon-Project/blob/main/docs/white-paper.md) if you want to understand how we got to this point.
+
+We are collecting images of prepaid meter installations If you have a prepaid meter, please send us a photo of it.
+
+![example meter image](./meter.webp)
 ## Project Structure
 
 * **`carboncredits.sol`:** Core contract for managing carbon credit holders, verifiers, and customers.
