@@ -31,8 +31,8 @@ rectangle "Smart Contracts" as SmartContracts #lightorange
 rectangle "Home Assistant" as HomeAssistant #lightpurple
 rectangle "Internet" as Internet #lightblue
 
-SolarPanels --> Inverter : Energy
-ChargeController --> SolarPanels : DC Voltage, Current
+SolarPanels --> ChargeController : Energy
+ChargeController --> Inverter : DC Voltage, Current
 Inverter --> OpenMeter : AC/DC Voltage, Current
 OpenMeter --> ESP32 : Analog Data
 PrepaidMeter --> ESP32 : Analog Data
