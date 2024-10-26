@@ -20,6 +20,7 @@ skinparam linetype ortho
 
 rectangle "Solar Panels" as SolarPanels #lightgreen
 rectangle "Charge Controller" as ChargeController #lightblue
+rectangle "Battery Bank" as BatteryBank #lightred
 rectangle "Inverter" as Inverter #lightblue
 rectangle "Open Meter" as OpenMeter #lightyellow
 rectangle "Prepaid Meter" as PrepaidMeter #lightyellow
@@ -32,6 +33,7 @@ rectangle "Home Assistant" as HomeAssistant #lightpurple
 rectangle "Internet" as Internet #lightblue
 
 SolarPanels --> ChargeController : Energy
+ChargeController --> BatteryBank : DC Voltage, Current
 ChargeController --> Inverter : DC Voltage, Current
 Inverter --> OpenMeter : AC/DC Voltage, Current
 OpenMeter --> ESP32 : Analog Data
