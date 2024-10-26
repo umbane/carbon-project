@@ -10,8 +10,10 @@ This document outlines the specifications for building a separate metering devic
 
 The circuit diagram for the metering device is provided below. This diagram includes all the necessary components and their connections.
 
-```plantuml
-@startuml
+<div hidden>
+```
+@startuml circuitDiagram
+
 skinparam defaultTextAlignment center
 skinparam linetype ortho
 
@@ -49,7 +51,10 @@ note right of Internet
 end note
 
 @enduml
-```
+
+</div>
+
+![](circuitDiagram.svg)
 
 ### Gerber File
 
