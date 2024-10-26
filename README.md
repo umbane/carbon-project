@@ -8,7 +8,7 @@ Currently City of Cape Town (CoCT) electricity users may feed electricity into t
 
 We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk, Cape Town Stock Exchange or other carbon trading projects. 
 
-Another development path would be to exchange mJ for Polygon (MATIC) in order to purchase [Klima tokens](https://www.klimadao.finance) representing carbon credits via the KlimaDAO network, or simply to become a Polygon node, generating MATIC directly. All of the above could become part of a future bridge and gateway.
+Another dimension would be to exchange mJ and/or aC for [Klima tokens](https://www.klimadao.finance) representing carbon credits on the KlimaDAO network. Since this requires MATIC there is some merit in becoming a Polygon node, generating MATIC directly. All of the above should be considered in a future ecosystem.
 
 Benefits include reward of domestic electricity production irrespective of the feed-in tariff, and ability to pledge and store tokens for future economic advantage. 
 
