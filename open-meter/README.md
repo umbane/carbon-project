@@ -11,6 +11,7 @@ This document outlines the specifications for building a separate metering devic
 The basic circuit diagram for the metering device is provided below. A PCB design with all the necessary components and their connections is still pending.
 
 <div hidden>
+
 ```
 @startuml circuitDiagram
 
@@ -59,7 +60,7 @@ note right of Internet
 end note
 
 @enduml
-
+```
 
 </div>
 
