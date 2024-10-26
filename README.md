@@ -50,11 +50,11 @@ An independent DIY `open-meter` PCB project is proposed to facilitate data acqui
 
 Refactoring this project to the Polygon network involved recompiling the [contracts for the Polygon network](polygon-contracts/) and will require deployment to a Polygon-compatible RPC endpoint.  Key considerations include:
 
+* **Polygon is Carbon Neutral:** Polygon has been touted as carbon neutral, but since [2022 has been carbon negative](https://polygon.technology/blog/polygon-is-going-carbon-negative-in-2022-with-a-20-million-pledge)
 * **Gas Costs:**  Gas costs on Polygon are generally lower than on Ethereum, potentially reducing transaction fees.
 * **Network Compatibility:** Ensure compatibility with Polygon-specific tools and libraries.
 * **Bridge Considerations:**  If any existing contracts are deployed on Ethereum, a bridge mechanism might be needed to transfer tokens or data between networks.  Since this project is not yet deployed, this is not a current concern.
 * **Testing:**  Ensure that tests are compatible with Polygon's environment.
-* **Polygon is Carbon Neutral:** Polygon is carbon neutral, which is a significant consideration for projects aiming to be environmentally conscious.
 
 ## Diagram of our System
 You can view a [mermaid diagram of our system here](docs/benefit_loop_diagram.md), alongside other diagrams in our [schematics folder](docs/schematics/).
