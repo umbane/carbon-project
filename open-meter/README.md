@@ -26,6 +26,7 @@ rectangle "Open Meter" as OpenMeter #lightyellow
 rectangle "Prepaid Meter" as PrepaidMeter #lightyellow
 rectangle "ESP32" as ESP32 #lightcoral
 rectangle "Camera" as Camera #lightgray
+rectangle "Local Area Network" as LAN #lightpurple
 rectangle "Data Processing" as DataProcessing #lightcyan
 rectangle "Chainlink Oracle" as ChainlinkOracle #lightpink
 rectangle "Smart Contracts" as SmartContracts #lightorange
@@ -40,17 +41,22 @@ OpenMeter --> ESP32 : Analog Data
 PrepaidMeter --> ESP32 : Analog Data
 ESP32 --> Camera : Image Data
 ESP32 --> DataProcessing : Processed Data
-DataProcessing --> ChainlinkOracle : Data
+DataProcessing --> Internet: Data
+DataProcessing --> LAN : Data
+Internet --> ChainlinkOracle : Data
 ChainlinkOracle --> SmartContracts : Verified Data
 SmartContracts --> HomeAssistant : Tokenized Energy
 SmartContracts --> Internet : Data
+DataProcessing --> HomeAssistant : Energy Consumption
+HomeAssistant --> Internet : Data
 
 note right of PrepaidMeter
   Distribution Board
 end note
 
 note right of SmartContracts
-  Carbon Credits (aC), Energy Tokens (mJ)
+   Energy Tokens (mJ) >> Carbon Credits (aC)
+   Carbon Credits (aC) >> Pledge Tokens (cArb)
 end note
 
 note right of HomeAssistant
