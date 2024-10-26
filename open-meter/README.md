@@ -18,8 +18,10 @@ skinparam defaultTextAlignment center
 skinparam linetype ortho
 
 rectangle "Solar Panels" as SolarPanels #lightgreen
+rectangle "Charge Controller" as ChargeController #lightblue
 rectangle "Inverter" as Inverter #lightblue
 rectangle "Open Meter" as OpenMeter #lightyellow
+rectangle "Prepaid Meter" as PrepaidMeter #lightyellow
 rectangle "ESP32" as ESP32 #lightcoral
 rectangle "Camera" as Camera #lightgray
 rectangle "Data Processing" as DataProcessing #lightcyan
@@ -29,8 +31,10 @@ rectangle "Home Assistant" as HomeAssistant #lightpurple
 rectangle "Internet" as Internet #lightblue
 
 SolarPanels --> Inverter : Energy
-Inverter --> OpenMeter : DC Voltage, Current
+ChargeController --> SolarPanels : DC Voltage, Current
+Inverter --> OpenMeter : AC/DC Voltage, Current
 OpenMeter --> ESP32 : Analog Data
+PrepaidMeter --> ESP32 : Digital Data
 ESP32 --> Camera : Image Data
 ESP32 --> DataProcessing : Processed Data
 DataProcessing --> ChainlinkOracle : Data
@@ -52,6 +56,7 @@ end note
 
 @enduml
 
+```
 </div>
 
 ![](circuitDiagram.png)
