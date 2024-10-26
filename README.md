@@ -6,7 +6,9 @@ This project integrates a carbon credit system with an energy token system.  The
 
 Currently City of Cape Town (CoCT) electricity users may feed electricity into the grid in exchange for a modest credit on the network. This is all good and well, but it creates a vertical monopoly where consumers who produce i.e. *prosumers* are prevented from sharing energy and/or surplus credits directly with their neighbours and the community at large. In addition, only feed-in energy is rewarded. 
 
-We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk, Cape Town Stock Exchange or other carbon trading projects.
+We propose the addition of a blockchain token (mJ) which is minted whenever there is "proof of production" of one watt of domestic energy, the mJ can then be traded for a carbon credit (aC) via an API to the JSE carbon trading desk, Cape Town Stock Exchange or other carbon trading projects. 
+
+Another development path would be to exchange mJ for Polygon (MATIC) in order to purchase [Klima tokens](https://www.klimadao.finance) representing carbon credits via the KlimaDAO network, or simply to become a Polygon node, generating MATIC directly. All of the above could become part of a future bridge and gateway.
 
 Benefits include reward of domestic electricity production irrespective of the feed-in tariff, and ability to pledge and store tokens for future economic advantage. 
 
@@ -48,7 +50,7 @@ An independent DIY `open-meter` PCB project is proposed to facilitate data acqui
 
 ## Polygon Network Refactoring
 
-Refactoring this project to the Polygon network involved recompiling the three original [contracts for the Polygon network](polygon-contracts/) with additional contracts that will require deployment to a Polygon-compatible RPC endpoint.  Key considerations include:
+Refactoring this project to the Polygon network involved amending and recompiling the three original [contracts for the Polygon network](polygon-contracts/) with additional contracts that will require deployment to a Polygon-compatible RPC endpoint.  Key considerations include:
 
 * **Polygon is Carbon Neutral:** Polygon has been touted as carbon neutral, but since [2022 has been carbon negative](https://polygon.technology/blog/polygon-is-going-carbon-negative-in-2022-with-a-20-million-pledge)
 * **Gas Costs:**  Gas costs on Polygon are generally lower than on Ethereum, potentially reducing transaction fees.
