@@ -54,7 +54,7 @@ end note
 
 </div>
 
-![](circuitDiagram.svg)
+![](circuitDiagram.png)
 
 ### Gerber File
 
