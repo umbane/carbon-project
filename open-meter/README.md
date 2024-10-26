@@ -8,7 +8,7 @@ This document outlines the specifications for building a separate metering devic
 
 ### Circuit Diagram
 
-The circuit diagram for the metering device is provided below. This diagram includes all the necessary components and their connections.
+The basic circuit diagram for the metering device is provided below. A PCB design with all the necessary components and their connections is still pending.
 
 <div hidden>
 ```
@@ -34,13 +34,17 @@ SolarPanels --> Inverter : Energy
 ChargeController --> SolarPanels : DC Voltage, Current
 Inverter --> OpenMeter : AC/DC Voltage, Current
 OpenMeter --> ESP32 : Analog Data
-PrepaidMeter --> ESP32 : Digital Data
+PrepaidMeter --> ESP32 : Analog Data
 ESP32 --> Camera : Image Data
 ESP32 --> DataProcessing : Processed Data
 DataProcessing --> ChainlinkOracle : Data
 ChainlinkOracle --> SmartContracts : Verified Data
 SmartContracts --> HomeAssistant : Tokenized Energy
 SmartContracts --> Internet : Data
+
+note right of PrepaidMeter
+  Distribution Board
+end note
 
 note right of SmartContracts
   Carbon Credits (aC), Energy Tokens (mJ)
@@ -56,7 +60,7 @@ end note
 
 @enduml
 
-```
+
 </div>
 
 ![](circuitDiagram.png)
