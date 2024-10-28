@@ -4,7 +4,7 @@ This document outlines alternative methods for acquiring electricity meter readi
 
 ## Current Limitations
 
-The City of Cape Town's eServices hub currently lacks a fully implemented system for electricity meter reading data acquisition.  The "Meter Reading Entry" section allows manual entry of readings, but automated data extraction is not possible.  A CSV download feature is also absent.  Only a water service CSV is available, but it is not populated with data.
+The City of Cape Town's eServices hub currently lacks a fully implemented system for electricity meter reading data acquisition.  The "Meter Reading Entry" section allows manual entry of readings, but automated data extraction is not possible.  A CSV download feature is also absent.  Only the water service, refuse collection and municipal contract CSVs appear to be available, but they are not populated with data, and thus are not suitable for data extraction.
 
 ## Alternative Methods
 
