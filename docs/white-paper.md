@@ -111,7 +111,7 @@ We will keep our initial ideas active inside our white paper, in order to note t
 
 We need to note here a pledge model is considered allowing actual energy to be pledged to our scheme, and in return an audit of one offset reward for every offset gained, and treated accordingly, but we will leave this thread for later.
 
-This fundamental token, whether pledged or not, for the purposes of this white paper is measured in a proposed MuizenJoules/MegaJoules “mJ” token and constitutes our tokenised unit in issue, which is alble to accrue a carbon credit in the form of "aC" and which may further be pledged via a "Pay-it-Forward" scheme in the form of a third unit known as CarB.
+This fundamental token, whether pledged or not, for the purposes of this white paper is measured in a proposed MuizenJoules/MegaJoules “mJ” token and constitutes our tokenised unit in issue, which is able to accrue a carbon credit in the form of "aC" and which may further be pledged via a "Pay-it-Forward" scheme in the form of a third unit known as CarB.
 
 ### Tokenisation: Smart Contract, Pay-it-Forward, Energy Credits
 
